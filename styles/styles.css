@@ -241,3 +241,16 @@ nav a:hover {
 .user-dropdown a:hover {
     background: rgba(255,255,255,0.2);
 }
+
+.user-dropdown {
+    position: fixed !important;
+    top: 70px;        /* Baja el menú un poco */
+    right: 40px;      /* Lugar donde aparece */
+    z-index: 999999999 !important;
+}
+
+.user-menu-container {
+    position: relative;
+    z-index: 999999999 !important;
+}
+

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => { // Carrucel
-
     const track = document.querySelector(".carrusel-inner");
     const slides = track.querySelectorAll("img");
     let index = 0;
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => { // Carrucel
 
 const userIcon = document.querySelector(".user-icon"); //Icon menu despegable
 const userDropdown = document.querySelector(".user-dropdown");
-
 userIcon.addEventListener("click", () => {
     // Muestra el menu con el clcick
     userDropdown.style.display =
