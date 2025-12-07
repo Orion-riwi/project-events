@@ -197,3 +197,47 @@ nav a:hover {
         transform: translateX(0%);
     }
 }
+
+.user-menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-icon {
+    font-size: 28px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.user-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    padding: 10px 0;
+    width: 150px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.user-dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: 0.3s;
+}
+
+.user-dropdown a:hover {
+    background: rgba(255,255,255,0.2);
+}
