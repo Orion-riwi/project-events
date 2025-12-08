@@ -1,82 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio / Registro</title>
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
 </head>
-<body>
-    
-    <div class="contenedor">
-        <div class="contenedor-form">
-                <form class="sing-in">
-                    <h2>Iniciar Sesión</h2>
-                    <div class="social-networks">
-                        <ion-icon name="logo-whatsapp"></ion-icon>
-                        <ion-icon name="logo-instagram"></ion-icon>
-                        <ion-icon name="logo-twitter"></ion-icon>
-                        <ion-icon name="logo-tiktok"></ion-icon>
-                    </div>
-                    <span>Use su correo y su contraseña</span>
-                    <div class="contenedor-input">
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <input type="text" placeholder="Email">
-                    </div>
-                    <div class="contenedor-input">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" placeholder="contraseña">
-                    </div>
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                    <button class="button"><a href="../html/index.html">INICIAR SESIÓN</a></button>
-                </form>
-        </div>
 
+<body>
+    <div class="contenedor">
+        <a href="../html/index.html" class="back-link">
+            &larr;
+        </a>
+        <!--login -->
         <div class="contenedor-form">
-            <form class="sing'up">
-                <h2>Registrarse</h2>
-                    <div class="social-networks">
-                        <ion-icon name="logo-whatsapp"></ion-icon>
-                        <ion-icon name="logo-instagram"></ion-icon>
-                        <ion-icon name="logo-twitter"></ion-icon>
-                        <ion-icon name="logo-tiktok"></ion-icon>
-                    </div>
-                    <span>Use su correo electronico para egistrarse</span>
-                    <div class="contenedor-input">
-                        <ion-icon name="person-outline"></ion-icon>
-                        <input type="text" placeholder="Nombre">
-                    </div>
-                    <div class="contenedor-input">
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <input type="text" placeholder="Email">
-                    </div>
-                    <div class="contenedor-input">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" placeholder="contraseña">
-                    </div>
-                    <button class="button">Registrarse</button>
+            <form class="sing-in" id="loginForm">
+                <h2>Iniciar Sesión</h2>
+
+                <div class="social-networks">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-tiktok"></ion-icon>
+                </div>
+
+                <span>Use su correo y contraseña</span>
+
+                <div class="contenedor-input">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input id="loginEmail" type="email" placeholder="Email" required>
+                </div>
+
+                <div class="contenedor-input">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input id="loginPass" type="password" placeholder="Contraseña" required>
+                </div>
+
+                <button type="submit" class="button">INICIAR SESIÓN</button>
+                <div id="loginMessage" class="message"></div>
             </form>
         </div>
 
+        <!--registro-->
+        <div class="contenedor-form">
+            <form class="sing'up" id="registerForm">
+                <h2>Registrarse</h2>
+
+                <div class="social-networks">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-tiktok"></ion-icon>
+                </div>
+
+                <span>Use su correo electrónico para registrarse</span>
+
+                <div class="contenedor-input">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input id="regName" type="text" placeholder="Nombre" required>
+                </div>
+
+                <div class="contenedor-input">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input id="regEmail" type="email" placeholder="Email" required>
+                </div>
+
+                <div class="contenedor-input">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input id="regPass" type="password" placeholder="Contraseña" required>
+                </div>
+
+                <button type="submit" class="button">Registrarse</button>
+                <div id="registerMessage" class="message"></div>
+            </form>
+        </div>
+
+        <!--bienvenida -->
         <div class="contenedor-welcome">
             <div class="welcome-sing-up welcome">
                 <h3>Bienvenido</h3>
                 <p>Ingrese sus datos personales para usar todas las funciones del sitio</p>
                 <button class="button" id="btn-sing-up">Registrarse</button>
             </div>
+
             <div class="welcome-sing-in welcome">
                 <h3>Hola</h3>
-                <p>Registrese con sus datos personales para usar todas las funciones</p>
+                <p>Regístrese con sus datos personales para usar todas las funciones</p>
                 <button class="button" id="btn-sing-in">Iniciar Sesión</button>
             </div>
         </div>
-        
+
     </div>
 
-
-
     <script src="../js/login.js"></script>
-    <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js "></script> 
-    <script  nomodule  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js "></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>

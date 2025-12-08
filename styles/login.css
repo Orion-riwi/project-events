@@ -183,3 +183,50 @@ div .contenedor div .contenedor-form form button .button a{
 .button a{
     color: white;
 }
+
+/*Mensajes de login-registro*/
+.message {
+    width: 80%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    display: none; 
+}
+
+.message.error {
+    background-color: #ffdddd;
+    border: 1px solid #ff5c5c;
+    color: #b10000;
+}
+
+.message.success {
+    background-color: #ddffdd;
+    border: 1px solid #5cb85c;
+    color: #0a7300;
+}
+
+/* --- Estilos para el botón de regreso (Volver al Inicio) --- */
+.back-link {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #56266d; /* Un color morado que armonice con tus botones */
+    padding: 10px 15px;
+    border: 2px solid #56266d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #56266d;
+    color: white;
+}
