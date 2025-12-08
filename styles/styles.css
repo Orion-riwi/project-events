@@ -111,14 +111,15 @@ nav a:hover {
 }
 
 .nav-right {
-    width: 14%;
+    color: #a879ff;;
+    width: 18%;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
 .nav-right input {
-    height: 30px;
+    height: 28px;
     padding: 6px 12px;
     border-radius: 20px;
     border: none;
@@ -126,7 +127,7 @@ nav a:hover {
 }
 
 .user-icon {
-    font-size: 30px;
+    font-size: 35px;
     cursor: pointer;
 }
 
