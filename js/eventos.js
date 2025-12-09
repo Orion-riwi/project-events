@@ -1,24 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --- Lógica del Carrusel ---
-    const track = document.querySelector(".carrusel-inner");
-    const slides = track.querySelectorAll("img");
-    let index = 0;
-    const total = slides.length;
-
-    function move() {
-        track.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    function next() {
-        index++;
-        if (index >= total) index = 0;
-        move();
-    }
-    
-    // Para que comience de nuevo
-    setInterval(next, 3000);
-    move();
-
     // --- Lógica del Menú Desplegable y Sesión de Usuario ---
     const userIcon = document.querySelector(".user-icon");
     const userDropdown = document.querySelector(".user-dropdown");

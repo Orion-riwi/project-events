@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
+
 body{
     width: 100%;
     height: 100vh;
@@ -13,6 +15,7 @@ body{
     align-items: center;
     background-color: #F0F4F3;
 }
+
 .contenedor{
     border: 2px solid black;
     width: 800px;
@@ -24,10 +27,12 @@ body{
     overflow: hidden;
     box-shadow: 0 0 10px rgb(0, 0,0,0.3);
 }
+
 .contenedor-form{
     width: 100%;
     overflow: hidden;
 }
+
 .contenedor-form form{
     height: 100%;
     display:  flex;
@@ -36,15 +41,18 @@ body{
     align-items: center;
     transition: transform 0.5s ease-in;
 }
+
 .contenedor-form h2{
     font-size: 30px;
     margin-bottom: 20px;
 }
+
 .social-networks{
     display: flex;
     gap: 12px;
     margin-bottom: 25px;
 }
+
 .social-networks ion-icon{
     border: 1px solid #C9CCCB;
     font-size: 18px;
@@ -52,10 +60,12 @@ body{
     padding: 8px;
     cursor: pointer;
 }
+
 .contenedor-form span{
     font-size: 12px;
     margin: 15px;
 }
+
 .contenedor-input{
     width: 300px;
     height: 40px;
@@ -67,6 +77,7 @@ body{
     padding: 0 15px;
     background-color: #EEEEEE;
 }
+
 .contenedor-input input{
     border: none;
     outline: none;
@@ -74,12 +85,14 @@ body{
     width: 100%;
     background-color: inherit;
 }
+
 .contenedor-form a{
     color: black;
     font-size: 14px;
     margin-bottom: 20px;
     margin-top: 5px;
 }
+
 .button{
     width: 170px;
     height: 45px;
@@ -91,14 +104,16 @@ body{
     background-color: #56266d;
     color: white;
 }
-/*animision form*/
 
+/*animision form*/
 .sing-up{
     transform: translateX(-100%);
 }
+
 .contenedor .toggle .sing-in{
     transform: translateX(100%);
 }
+
 .contenedor .toggle .sing-up{
     transform: translateX(0);
 }
@@ -116,12 +131,14 @@ body{
     overflow: hidden;
     border-radius: 50% 0 0 50%;
 }
+
 .contenedor.toggle .contenedor-welcome{
     transform: translateX(0);
     border-radius: 0 50% 50% 0;
     background-color: #000000;
 
 }
+
 .contenedor-welcome .welcome{
     position: absolute;
     display: flex;
@@ -132,23 +149,29 @@ body{
     color: white;
     transition:  transform 0.5s ease-in-out;
 }
+
 .welcome-sing-in{
     transform:  translateX(100%);
 }
+
 .contenedor-welcome h3{
     font-size: 40px;
 }
+
 .contenedor-welcome p{
     font-size: 14px;
     text-align: center;
 }
+
 .contenedor-welcome .button{
     border: 2px solid white;
     background-color: transparent;
 }
+
 .contenedor.toggle .welcome-sing-in{
     transform: translateX(0);
 }
+
 .contenedor.toggle .welcome-sing-up{
     transform: translateX(-100%);
 }
@@ -216,7 +239,7 @@ div .contenedor div .contenedor-form form button .button a{
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    color: #56266d; /* Un color morado que armonice con tus botones */
+    color: #56266d;
     padding: 10px 15px;
     border: 2px solid #56266d;
     border-radius: 8px;

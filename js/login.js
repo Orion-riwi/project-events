@@ -11,18 +11,21 @@ btnSingUp.addEventListener("click", () => {
     contenedor.classList.add("toggle");
 });
 
+
 // FUNCIONES PARA MOSTRAR MENSAJES
 function showMessage(element, text, type) {
     element.style.display = "block";
     element.textContent = text;
-    element.className = "message " + type; // "message error" o "message success"
+    element.className = "message " + type; 
 
     setTimeout(() => {
         element.style.display = "none";
-    }, 2000);
+    }, 3000);
 }
 
-// REGISTRO
+
+
+//          REGISTRO
 const registerForm = document.getElementById("registerForm");
 const registerMessage = document.getElementById("registerMessage");
 
@@ -54,7 +57,8 @@ registerForm.addEventListener("submit", (e) => {
     }, 1000);
 });
 
-// INICIAR SESIÓN
+
+//          INICIAR SESIÓN
 const loginForm = document.getElementById("loginForm");
 const loginMessage = document.getElementById("loginMessage");
 
@@ -79,5 +83,6 @@ loginForm.addEventListener("submit", (e) => {
 
     setTimeout(() => {
         window.location.href = "../html/index.html";
-    }, 1200);
+    }, 1500);
 });
+
