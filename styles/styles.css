@@ -7,6 +7,10 @@
     font-family: "Montserrat", sans-serif;
 }
 
+body {
+    margin-top: 100px;
+}
+
 #bg-video {
     position: fixed;
     top: 0;
