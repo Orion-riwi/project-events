@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-
     // --- Lógica del Menú Desplegable y Sesión de Usuario ---
     const userIcon = document.querySelector(".user-icon");
     const userDropdown = document.querySelector(".user-dropdown");
