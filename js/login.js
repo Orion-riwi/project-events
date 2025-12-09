@@ -16,7 +16,7 @@ btnSingUp.addEventListener("click", () => {
 function showMessage(element, text, type) {
     element.style.display = "block";
     element.textContent = text;
-    element.className = "message " + type; // "message error" o "message success"
+    element.className = "message " + type; 
 
     setTimeout(() => {
         element.style.display = "none";
@@ -24,9 +24,8 @@ function showMessage(element, text, type) {
 }
 
 
-// -----------------------------------
+
 //          REGISTRO
-// -----------------------------------
 const registerForm = document.getElementById("registerForm");
 const registerMessage = document.getElementById("registerMessage");
 
@@ -59,9 +58,7 @@ registerForm.addEventListener("submit", (e) => {
 });
 
 
-// -----------------------------------
 //          INICIAR SESIÓN
-// -----------------------------------
 const loginForm = document.getElementById("loginForm");
 const loginMessage = document.getElementById("loginMessage");
 
@@ -88,3 +85,4 @@ loginForm.addEventListener("submit", (e) => {
         window.location.href = "../html/index.html";
     }, 1500);
 });
+
