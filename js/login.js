@@ -69,7 +69,7 @@ loginForm.addEventListener("submit", (e) => {
     const userFound = users.find(u => u.email === email && u.pass === pass);
 
     if (!userFound) {
-        showMessage(loginMessage, "❌ Correo o contraseña incorrectos", "error");
+        showMessage(loginMessage, "❌e Correo o contraseña incorrectos", "error");
         return;
     }
 
@@ -81,3 +81,39 @@ loginForm.addEventListener("submit", (e) => {
         window.location.href = "../html/index.html";
     }, 1200);
 });
+
+
+// ... (código existente)
+
+// REGISTRO
+// ...
+registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("regName").value;
+    const email = document.getElementById("regEmail").value;
+    const pass = document.getElementById("regPass").value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const exists = users.some(u => u.email === email);
+
+    if (exists) {
+        showMessage(registerMessage, "⚠ Este correo ya está registrado", "error");
+        return;
+    }
+
+    // AÑADIDO: Guardar el nuevo usuario con el rol por defecto
+    users.push({ name, email, pass, role: "user" }); // <<< CAMBIO AQUÍ
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    showMessage(registerMessage, "✔ Registro exitoso", "success");
+
+    registerForm.reset();
+
+    setTimeout(() => {
+        contenedor.classList.remove("toggle");
+    }, 1000);
+});
+// ... (resto del código existente)
