@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Admin</title>
+    <title>Dashboard - Usuarios</title>
     <link rel="stylesheet" href="../styles/dashboard.css">
 </head>
 
 <body>
 
-    <header class="admin-header">
-        <h1>Panel de Administración</h1>
-        <button id="logoutBtn" class="btn-logout">Cerrar sesión</button>
-    </header>
+    <div class="sidebar">
 
-    <main class="panel-container">
-        <h2>Usuarios Registrados</h2>
+        <div class="profile">
+            <div class="pfp">👤</div>
+            <h2>Análisis</h2>
+        </div>
 
-        <table class="tabla-usuarios">
+        <div class="section">
+            <h3>Registros</h3>
+            <button class="btn-side" id="verTodos">Ver todos los registros</button>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <header class="top">
+            <h1>Cantidad de usuarios</h1>
+
+            <div class="top-right">
+                <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+            </div>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="busqueda" placeholder="Buscando">
+            <button id="btnBuscar" class="search-btn">🔍</button>
+            <button id="btnLimpiar" class="delete-btn">🗑</button>
+            <label><input type="checkbox" id="checkTodos"> Mostrar todos</label>
+        </div>
+
+        <table class="tabla">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Correo</th>
-                    <th>Acción</th>
+                    <td class="col-id">Id</td>
+                    <td class="col-usuario">Usuario</td>
+                    <td class="col-correo">Correo</td>
+                    <td class="col-tipo">Tipo de Usuario</td>
+                    <td class="col-accion">Opcion de eliminar</td>
                 </tr>
             </thead>
-            <tbody id="usuariosTable"></tbody>
+            <tbody id="tbody"></tbody>
         </table>
-    </main>
+
+    </div>
 
     <script src="../js/dashboard.js"></script>
 </body>
+
 </html>

@@ -1,52 +1,117 @@
-body{
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
+body {
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
 }
 
-.admin-header{
-    background: #3b0066;
-    padding: 15px 30px;
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: #073d6e;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pfp {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    color: #b9ddff;
+    margin-bottom: 10px;
+}
+
+.btn-side {
+    width: 100%;
+    padding: 10px;
+    background: #0d528f;
+    border: none;
+    color: white;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-side:hover {
+    background: #a879ff;
+}
+
+/* Main content */
+.main {
+    flex: 1;
+    padding: 25px;
+}
+
+.top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.btn-logout{
-    background: red;
-    padding: 10px 18px;
-    border: none;
+.home-btn, .logout-btn {
+    padding: 10px 15px;
+    background: #a879ff;
     color: white;
-    border-radius: 6px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
     cursor: pointer;
 }
 
-.panel-container{
-    margin: 40px auto;
-    width: 90%;
-    background: rgba(255,255,255,0.1);
-    padding: 25px;
-    border-radius: 12px;
+.logout-btn {
+    background: #ce3131;
 }
 
-.tabla-usuarios{
+.search-box {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+}
+
+.search-btn, .delete-btn {
+    padding: 10px 15px;
+    background: #0d528f;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Tabla */
+.tabla {
     width: 100%;
     border-collapse: collapse;
+    background: white;
 }
 
-.tabla-usuarios th, .tabla-usuarios td{
-    border-bottom: 1px solid #555;
-    padding: 12px;
-    text-align: left;
+.tabla th, .tabla td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
-.tabla-usuarios button{
-    padding: 8px 12px;
-    border: none;
-    background: #ff3b3b;
-    border-radius: 5px;
+.deleteRow {
+    background: #ce3131;
     color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
