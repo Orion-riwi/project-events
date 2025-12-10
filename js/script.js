@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // Para que comience de nuevo
-    setInterval(next, 3000);
+    setInterval(next, 2000);
     move();
 
     // --- Lógica del Menú Desplegable y Sesión de Usuario ---
