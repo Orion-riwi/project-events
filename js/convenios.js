@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index >= total) index = 0;
         move();
     }
-    
+
     // Para que comience de nuevo
     setInterval(next, 3000);
     move();
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Listener para redirigir al login (solo para claridad, ya está en el href)
     function redirectToLogin(e) {
         if (loginLogoutLink.textContent === "Iniciar sesión") {
-             // Permitir que el 'href' normal haga la navegación
+            // Permitir que el 'href' normal haga la navegación
         }
     }
 
@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  const titulo = document.querySelector('.h1-title');
+const titulo = document.querySelector('.h1-title');
 
-  window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
     titulo.classList.toggle('is-stuck', window.scrollY > 30);
-  });
+});
