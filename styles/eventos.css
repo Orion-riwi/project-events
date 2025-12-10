@@ -4,6 +4,7 @@
     gap: 25px;
     padding: 40px;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .card {
@@ -57,3 +58,89 @@
 .card button:hover {
     background: #c6a3ff;
 }
+
+/* ===== DETALLE DEL EVENTO ===== */
+.detalle-evento {
+    max-width: 900px;
+    margin: 130px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* glass effect */
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+}
+
+.detalle-evento h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #a879ff;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.7);
+}
+
+.detalle-evento img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.detalle-evento p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.detalle-evento button#comprar {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: #a879ff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.detalle-evento button#comprar:hover {
+    background: #c6a3ff;
+    transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .detalle-evento {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .detalle-evento h1 {
+        font-size: 26px;
+    }
+
+    .detalle-evento p {
+        font-size: 14px;
+    }
+
+    .detalle-evento button#comprar {
+        width: 100%;
+    }
+}
+.mensaje-compra {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: #28a745; /* verde */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* por defecto oculto */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
