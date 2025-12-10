@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container-title {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.h1-title{
+  position: sticky;
+  top: 0;
+  color: #62007d;
+  font-size: 120px;
+  backdrop-filter: blur(4px); 
+  padding: 10px ;
+  transition: transform 0.80s ease;
+  z-index: 100;
+}
+
+.h1-title.is-stuck {
+  transform: scale(1.5) translateY(-5px);
+}
