@@ -1,3 +1,5 @@
+// ../js/dashboard.js
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const adminEmail = "juandaadmin@gmail.com";
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let users = JSON.parse(localStorage.getItem("users")) || [];
     const tbody = document.getElementById("tbody");
 
-    // Renderizar tabla
+    // Renderizar tabla de usuarios
     function render(lista) {
         tbody.innerHTML = "";
 
@@ -50,29 +52,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
     render(users);
 
-    // Buscar
-    document.getElementById("btnBuscar").onclick = () => {
-        const txt = document.getElementById("busqueda").value.toLowerCase();
-        const filtrados = users.filter(u =>
-            u.name.toLowerCase().includes(txt) ||
-            u.email.toLowerCase().includes(txt)
-        );
-        render(filtrados);
-    };
-
-    // Limpiar
+    // Limpiar busqueda
     document.getElementById("btnLimpiar").onclick = () => {
         document.getElementById("busqueda").value = "";
         render(users);
     };
 
-    // Mostrar todos
-    document.getElementById("verTodos").onclick = () => render(users);
+    // Mostrar todos 
+    document.getElementById("verTodosUsuarios").onclick = () => render(users);
 
     // Logout
     document.getElementById("logoutBtn").onclick = () => {
         localStorage.removeItem("activeUser");
-        window.location.href = "../html/login.html";
+        window.location.href = "../html/index.html";
     };
 
+    // RENDER COMPRAS EN DASHBOARD
+    const tbodyCompras = document.getElementById("tbodyCompras");
+
+    function renderCompras() {
+        const compras = JSON.parse(localStorage.getItem("compras")) || [];
+        tbodyCompras.innerHTML = "";
+
+        compras.forEach(c => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${c.usuario}</td>
+                <td>${c.email}</td>
+                <td>${c.evento}</td>
+                <td>$${Number(c.precio).toLocaleString()}</td>
+                <td>${c.fecha}</td>
+            `;
+            tbodyCompras.appendChild(row);
+        });
+    }
+
+    renderCompras();
+
+    // Botón para limpiar historial de compras
+    const btnLimpiarCompras = document.getElementById("btnLimpiarCompras");
+    if (btnLimpiarCompras) {
+        btnLimpiarCompras.addEventListener("click", () => {
+            if (!confirm("¿Seguro que quieres eliminar todo el historial de compras?")) return;
+            localStorage.removeItem("compras");
+            renderCompras();
+            alert("Historial de compras eliminado.");
+        });
+    }
+
 });
+
+// Mostrar alerta para botones de eventos
+const btnEventos = document.getElementById("btnEventos");
+const btnEliminarEventos = document.getElementById("btnEliminarEventos");
+
+if (btnEventos) {
+    btnEventos.addEventListener("click", () => {
+        alert("Este apartado está en construcción ");
+    });
+}
+
+if (btnEliminarEventos) {
+    btnEliminarEventos.addEventListener("click", () => {
+        alert("Este apartado está en construcción ");
+    });
+}

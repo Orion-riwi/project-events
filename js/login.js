@@ -25,7 +25,7 @@ function showMessage(element, text, type) {
 
 
 
-//          REGISTRO
+//  REGISTRO
 const registerForm = document.getElementById("registerForm");
 const registerMessage = document.getElementById("registerMessage");
 
@@ -48,7 +48,7 @@ registerForm.addEventListener("submit", (e) => {
     users.push({ name, email, pass });
     localStorage.setItem("users", JSON.stringify(users));
 
-    showMessage(registerMessage, "✔ Registro exitoso", "success");
+    showMessage(registerMessage, " Registro exitoso", "success");
 
     registerForm.reset();
 
@@ -96,13 +96,13 @@ loginForm.addEventListener("submit", (e) => {
         const userFound = users.find(u => u.email === email && u.pass === pass);
 
         if (!userFound) {
-            showMessage(loginMessage, "❌ Correo o contraseña incorrectos", "error");
+            showMessage(loginMessage, " Correo o contraseña incorrectos", "error");
             return;
         }
 
         localStorage.setItem("activeUser", JSON.stringify(userFound));
 
-        showMessage(loginMessage, "✔ Bienvenido " + userFound.name, "success");
+        showMessage(loginMessage, " Bienvenido " + userFound.name, "success");
 
         setTimeout(() => {
             window.location.href = "../html/index.html";

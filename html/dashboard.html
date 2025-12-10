@@ -19,7 +19,17 @@
 
         <div class="section">
             <h3>Registros</h3>
-            <button class="btn-side" id="verTodos">Ver todos los registros</button>
+            <button class="btn-side" id="verTodosUsuarios">Ver todos los registros</button>
+        </div>
+
+        <div class="section">
+            <h3>Actualizar eventos</h3>
+            <button class="btn-side" id="btnEventos">Ver todos los eventos</button>
+        </div>
+
+        <div class="section">
+            <h3>Eliminar eventos</h3>
+            <button class="btn-side" id="btnEliminarEventos">Ver todos los eventos</button>
         </div>
 
     </div>
@@ -54,9 +64,30 @@
             <tbody id="tbody"></tbody>
         </table>
 
+        <!-- SECCIÓN NUEVA: Registros de compras -->
+        <section style="margin-top: 40px;">
+            <h2>Registros de compras</h2>
+            <div style="margin-bottom:10px;">
+                <button id="btnLimpiarCompras" class="delete-btn">Limpiar historial de compras</button>
+            </div>
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <td>Usuario</td>
+                        <td>Correo</td>
+                        <td>Evento</td>
+                        <td>Precio</td>
+                        <td>Fecha</td>
+                    </tr>
+                </thead>
+                <tbody id="tbodyCompras"></tbody>
+            </table>
+        </section>
+
     </div>
 
     <script src="../js/dashboard.js"></script>
+    <script src="../js/ayuda.js"></script>
 </body>
 
 </html>
