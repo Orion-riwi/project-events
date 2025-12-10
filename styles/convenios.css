@@ -13,14 +13,221 @@
 .h1-title{
   position: sticky;
   top: 0;
-  color: #62007d;
+  color: #ffffff;
   font-size: 120px;
   backdrop-filter: blur(4px); 
   padding: 10px ;
   transition: transform 0.80s ease;
-  z-index: 100;
+  z-index: 1;
 }
 
 .h1-title.is-stuck {
-  transform: scale(1.5) translateY(-5px);
+  transform: scale(1.9) translateY(-5px);
+}
+
+/*Inicio estilos de cards*/
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 200px;
+  
+}
+
+.card {
+  width: 550px;
+  height: 450px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Transparente */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde suave */
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* efecto glass */
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-top: 10vh;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 50%;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.card h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card p {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #e3e3e3;
+}
+
+.card button {
+  padding: 10px 20px;
+  border: none;
+  background: purple;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #b400ff;
+}
+/*Final estilos de cards*/
+
+
+.info-waka {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 70px 40px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255,255,255,0.25);
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    flex-wrap: wrap;
+    animation: fadeIn 1.2s ease;
+}
+
+.bloque-info {
+    width: 45%;
+    min-width: 320px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: transform .3s;
+
+}
+
+.bloque-info:hover {
+    transform: scale(1.03);
+}
+
+.bloque-info p {
+    font-size: 17px;
+    opacity: 0.9;
+    text-align: justify;
+}
+
+button{
+  padding: 15px 20px;
+  border: none;
+  background: purple;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 30vh;
+}
+
+button:hover {
+  background: #b400ff;
+}
+/**/
+.container-title2 {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.h1-title2{
+  position: sticky;
+  top: 0;
+  color: #ffffff;
+  font-size: 100px;
+  backdrop-filter: blur(10px); 
+  padding: 140px ;
+  z-index: 1;
+
+}
+
+
+
+/* --- Footer --- */
+.footer-waka {
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+.footer-waka img {
+    width: 90px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.footer-waka p {
+    opacity: .85;
+    font-size: 16px;
+}
+
+.footer-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #a879ff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #d8c3ff;
+}
+
+.copy {
+    margin-top: 10px;
+    opacity: .5;
+    font-size: 14px;
+}
+
+/* --- Animaciones --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.contenido .carrusel {
+    transform: translateX(-10px);
+}
+
+.navbar nav {
+    margin-left: 260px;
+}
+.user-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Espacio entre el nombre y el icono */
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.user-icon #userNameDisplay {
+    font-weight: bold;
+    font-size: 16px;
 }
