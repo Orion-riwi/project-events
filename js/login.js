@@ -16,7 +16,7 @@ btnSingUp.addEventListener("click", () => {
 function showMessage(element, text, type) {
     element.style.display = "block";
     element.textContent = text;
-    element.className = "message " + type; 
+    element.className = "message " + type;
 
     setTimeout(() => {
         element.style.display = "none";
@@ -65,24 +65,49 @@ const loginMessage = document.getElementById("loginMessage");
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const email = document.getElementById("loginEmail").value;
-    const pass = document.getElementById("loginPass").value;
+    loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+        const email = document.getElementById("loginEmail").value;
+        const pass = document.getElementById("loginPass").value;
 
-    const userFound = users.find(u => u.email === email && u.pass === pass);
+        // ---- VALIDACIÓN DEL ADMIN QUEMADO ----
+        if (email === "juandaadmin@gmail.com" && pass === "1234") {
+            const adminData = {
+                name: "Administrador",
+                email: email,
+                pass: pass
+            };
 
-    if (!userFound) {
-        showMessage(loginMessage, "❌ Correo o contraseña incorrectos", "error");
-        return;
-    }
+            localStorage.setItem("activeUser", JSON.stringify(adminData));
 
-    localStorage.setItem("activeUser", JSON.stringify(userFound));
+            showMessage(loginMessage, "✔ Bienvenido Administrador", "success");
 
-    showMessage(loginMessage, "✔ Bienvenido " + userFound.name, "success");
+            setTimeout(() => {
+                window.location.href = "../html/dashboard.html";
+            }, 1500);
 
-    setTimeout(() => {
-        window.location.href = "../html/index.html";
-    }, 1500);
+            return; // IMPORTANTE: detener aquí
+        }
+
+        // ---- VALIDACIÓN DE USUARIOS NORMALES ----
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        const userFound = users.find(u => u.email === email && u.pass === pass);
+
+        if (!userFound) {
+            showMessage(loginMessage, "❌ Correo o contraseña incorrectos", "error");
+            return;
+        }
+
+        localStorage.setItem("activeUser", JSON.stringify(userFound));
+
+        showMessage(loginMessage, "✔ Bienvenido " + userFound.name, "success");
+
+        setTimeout(() => {
+            window.location.href = "../html/index.html";
+        }, 1500);
+    });
+
 });
 
