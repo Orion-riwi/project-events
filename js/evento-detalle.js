@@ -85,7 +85,7 @@ botonComprar.addEventListener("click", () => {
     const activeUser = JSON.parse(localStorage.getItem("activeUser"));
     if (!activeUser) {
         alert("Debes iniciar sesión para comprar.");
-        window.location.href = "./html/login.html";
+        window.location.href = "./login.html";
         return;
     }
 

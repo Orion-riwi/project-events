@@ -2,7 +2,7 @@ function verEvento(eventId) {
     // Guardar el evento seleccionado en localStorage
     localStorage.setItem('selectedEvent', eventId);
     // Redirigir a la página de detalle
-    window.location.href = './html/eventos-detalle.html';
+    window.location.href = './eventos-detalle.html';
 }
 
 document.querySelectorAll('.enlace-interno').forEach(enlace => {
