@@ -99,7 +99,7 @@ loginForm.addEventListener("submit", (e) => {
         showMessage(loginMessage, " Bienvenido " + userFound.name, "success");
 
         setTimeout(() => {
-            window.location.href = "../index.html";
+            window.location.href = "./index.html";
         }, 1500);
     });
 

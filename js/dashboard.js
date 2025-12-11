@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Logout
     document.getElementById("logoutBtn").onclick = () => {
         localStorage.removeItem("activeUser");
-        window.location.href = "../index.html";
+        window.location.href = "./index.html";
     };
 
     // muestra en la compra de los usuarios

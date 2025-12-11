@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("activeUser");
         updateNavbar();
         // Redirigir al inicio
-        window.location.href = "../index.html";
+        window.location.href = "./index.html";
     };
 
     const updateNavbar = () => {
