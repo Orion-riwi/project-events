@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function logout() {
         localStorage.removeItem("activeUser");
         // Redireccionar o actualizar la interfaz
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
     }
 
     // Función para actualizar la interfaz del usuario
