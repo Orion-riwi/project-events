@@ -78,7 +78,7 @@ loginForm.addEventListener("submit", (e) => {
             showMessage(loginMessage, " Bienvenido Administrador", "success");
 
             setTimeout(() => {
-                window.location.href = "./html/dashboard.html";
+                window.location.href = "./dashboard.html";
             }, 1500);
 
             return; // Para poder para o detener
