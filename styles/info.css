@@ -57,7 +57,7 @@ html {
     }
 }
 
-.bloque-info {
+.info-bloque {
     background: rgba(30, 5, 40, 0.78);
     backdrop-filter: blur(14px);
     border-radius: 20px;
@@ -67,12 +67,12 @@ html {
     transition: all 0.4s ease;
 }
 
-.bloque-info:hover {
+.info-bloque:hover {
     transform: translateY(-10px);
     box-shadow: 0 25px 60px rgba(98, 0, 125, 0.5);
 }
 
-.bloque-info h2 {
+.info-bloque h2 {
     font-size: 2.6rem;
     margin-bottom: 25px;
     color: #e0b0ff;
@@ -80,7 +80,7 @@ html {
     position: relative;
 }
 
-.bloque-info h2::after {
+.info-bloque h2::after {
     content: '';
     width: 80px;
     height: 5px;
@@ -90,13 +90,13 @@ html {
     border-radius: 3px;
 }
 
-.bloque-info h3 {
+.info-bloque h3 {
     font-size: 1.5rem;
     margin: 28px 0 12px;
     color: #c8a2ff;
 }
 
-.bloque-info p {
+.info-bloque p {
     font-size: 1.12rem;
     line-height: 1.8;
     color: #e0e0e0;

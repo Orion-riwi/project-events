@@ -85,8 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  const titulo = document.querySelector('.h1-title');
+const titulo = document.querySelector('.h1-title');
 
-  window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
     titulo.classList.toggle('is-stuck', window.scrollY > 30);
-  });
+});
+
+document.querySelectorAll('.enlace-interno').forEach(enlace => {
+    enlace.addEventListener('click', function(e) {
+        e.preventDefault();                    // evita comportamiento por defecto
+        window.location.href = this.getAttribute('href');
+    });
+});

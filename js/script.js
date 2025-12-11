@@ -83,3 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.querySelectorAll('.enlace-interno').forEach(enlace => {
+    enlace.addEventListener('click', function(e) {
+        e.preventDefault();                    // evita comportamiento por defecto
+        window.location.href = this.getAttribute('href');
+    });
+});

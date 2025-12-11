@@ -128,3 +128,10 @@ if (botonComprar) {
         console.log(`Compra registrada: ${activeUser.email} - ${evento.titulo} - $${evento.precio}`);
     });
 }
+
+document.querySelectorAll('.enlace-interno').forEach(enlace => {
+    enlace.addEventListener('click', function(e) {
+        e.preventDefault();                    // evita comportamiento por defecto
+        window.location.href = this.getAttribute('href');
+    });
+});
