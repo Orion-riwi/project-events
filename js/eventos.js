@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Usuario no logueado
             userNameDisplay.textContent = ""; // Borra el nombre
             loginLogoutLink.textContent = "Iniciar sesión";
-            loginLogoutLink.href = "./html/login.html"; // Vuelve al enlace de login
+            loginLogoutLink.href = "./login.html"; // Vuelve al enlace de login
             loginLogoutLink.removeEventListener("click", logout); // Quita el listener de Cerrar Sesión
             loginLogoutLink.addEventListener("click", redirectToLogin); // Agrega el listener de Iniciar Sesión (opcional, ya está el href)
         }

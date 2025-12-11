@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             userNameDisplay.textContent = "";
             loginLogoutLink.textContent = "Iniciar sesión";
-            loginLogoutLink.href = "./html/login.html";
+            loginLogoutLink.href = "./login.html";
             loginLogoutLink.removeEventListener("click", logout);
         }
     };
