@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Protección admin
     if (!active || active.email !== adminEmail || active.pass !== adminPass) {
         alert("Acceso denegado");
-        window.location.href = "../html/login.html";
+        window.location.href = "./html/login.html";
         return;
     }
 
