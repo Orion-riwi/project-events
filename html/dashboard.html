@@ -24,12 +24,12 @@
 
         <div class="section">
             <h3>Actualizar eventos</h3>
-            <button class="btn-side" id="btnEventos">Ver todos los eventos</button>
+            <button class="btn-side" id="btnActualizarEventos">Crear evento</button>
         </div>
 
         <div class="section">
-            <h3>Eliminar eventos</h3>
-            <button class="btn-side" id="btnEliminarEventos">Ver todos los eventos</button>
+            <h3>Actualizar y eliminar eventos</h3>
+            <button class="btn-side" id="btnEliminarEventos">Editar y eliminar eventos</button>
         </div>
 
     </div>
@@ -58,13 +58,40 @@
                     <td class="col-usuario">Usuario</td>
                     <td class="col-correo">Correo</td>
                     <td class="col-tipo">Tipo de Usuario</td>
-                    <td class="col-accion">Opcion de eliminar</td>
+                    <td class="col-accion">Opción de eliminar</td>
                 </tr>
             </thead>
             <tbody id="tbody"></tbody>
         </table>
 
-        <!-- SECCIÓN NUEVA: Registros de compras -->
+        <!-- SECCIÓN NUEVA: CRUD DE EVENTOS -->
+        <section id="crudEventos" style="margin-top:40px; display:none;">
+            <h2>Gestión de Eventos</h2>
+
+            <form id="formEvento" style="margin-bottom:20px;">
+                <input type="hidden" id="editId">
+
+                <input type="text" id="tituloEvento" placeholder="Título" required>
+                <input type="text" id="descripcionEvento" placeholder="Descripción" required>
+                <input type="text" id="imagenEvento" placeholder="Ruta de la imagen (../img/...)" required>
+                <input type="number" id="precioEvento" placeholder="Precio" required>
+
+                <button type="submit" class="search-btn">Guardar</button>
+            </form>
+
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <td>Título</td>
+                        <td>Precio</td>
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody id="tbodyEventos"></tbody>
+            </table>
+        </section>
+
+        <!-- SECCIÓN COMPRAS -->
         <section style="margin-top: 40px;">
             <h2>Registros de compras</h2>
             <div style="margin-bottom:10px;">

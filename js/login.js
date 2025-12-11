@@ -1,5 +1,4 @@
-// CAMBIAR ENTRE LOGIN Y REGISTRO
-const contenedor = document.querySelector(".contenedor");
+const contenedor = document.querySelector(".contenedor"); // cambia entre login y registro
 const btnSingIn = document.getElementById("btn-sing-in");
 const btnSingUp = document.getElementById("btn-sing-up");
 
@@ -11,19 +10,15 @@ btnSingUp.addEventListener("click", () => {
     contenedor.classList.add("toggle");
 });
 
-
-// FUNCIONES PARA MOSTRAR MENSAJES
 function showMessage(element, text, type) {
     element.style.display = "block";
-    element.textContent = text;
+    element.textContent = text; // FUNCIONES PARA MOSTRAR MENSAJES
     element.className = "message " + type;
 
     setTimeout(() => {
         element.style.display = "none";
     }, 3000);
 }
-
-
 
 //  REGISTRO
 const registerForm = document.getElementById("registerForm");
@@ -41,7 +36,7 @@ registerForm.addEventListener("submit", (e) => {
     const exists = users.some(u => u.email === email);
 
     if (exists) {
-        showMessage(registerMessage, "⚠ Este correo ya está registrado", "error");
+        showMessage(registerMessage, " Este correo ya está registrado", "error");
         return;
     }
 
@@ -57,7 +52,6 @@ registerForm.addEventListener("submit", (e) => {
     }, 1000);
 });
 
-
 //          INICIAR SESIÓN
 const loginForm = document.getElementById("loginForm");
 const loginMessage = document.getElementById("loginMessage");
@@ -71,7 +65,7 @@ loginForm.addEventListener("submit", (e) => {
         const email = document.getElementById("loginEmail").value;
         const pass = document.getElementById("loginPass").value;
 
-        // ---- VALIDACIÓN DEL ADMIN QUEMADO ----
+        // ---- validar entrada del admin ----
         if (email === "juandaadmin@gmail.com" && pass === "1234") {
             const adminData = {
                 name: "Administrador",
@@ -81,16 +75,16 @@ loginForm.addEventListener("submit", (e) => {
 
             localStorage.setItem("activeUser", JSON.stringify(adminData));
 
-            showMessage(loginMessage, "✔ Bienvenido Administrador", "success");
+            showMessage(loginMessage, " Bienvenido Administrador", "success");
 
             setTimeout(() => {
                 window.location.href = "../html/dashboard.html";
             }, 1500);
 
-            return; // IMPORTANTE: detener aquí
+            return; // Para poder para o detener
         }
 
-        // ---- VALIDACIÓN DE USUARIOS NORMALES ----
+        // VAlida si el usario es usuario o admin
         let users = JSON.parse(localStorage.getItem("users")) || [];
 
         const userFound = users.find(u => u.email === email && u.pass === pass);
