@@ -1,130 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WAKA</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" type="image/png" href="./img/logo.png">
-</head>
-
-<body>
-
-    <video id="bg-video" autoplay muted loop>
-        <source src="./img/vid/video-fondo.mp4" type="video/mp4">
-    </video>
-
-    <div class="overlay"></div>
-
-    <header class="navbar">
-        <div class="logo">
-            <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
-        </div>
-
-        <nav>
-            <a href="./html/eventos.html">Eventos</a>
-            <a href="./html/convenios.html">Convenios</a>
-            <a href="./html/info.html">Información </a>
-        </nav>
-
-        <div class="nav-right">
-            <input type="text" placeholder="Search">
-            <div class="user-menu-container">
-
-                <div class="user-icon">
-                    <span id="userNameDisplay"></span> 👤
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WAKA: Plataforma de eventos musicales y convenios en Colombia. Experiencias únicas.">
+        <title> WAKA - Inicio </title>
+        <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="icon" type="image/png" href="./img/logo.png">
+    </head>
+    <body>
+        <video id="bg-video" autoplay muted loop playsinline preload="metadata"> <source src="./img/vid/video-fondo.mp4" type="video/mp4"> </video>
+        <div class="overlay"> </div>
+        <header class="navbar" role="banner">
+            <div class="logo">
+                <a href="./index.html" aria-label="Volver al inicio"> <img src="./img/logo.png" alt="Logo de WAKA"> </a>
+            </div>
+            <nav aria-label="Navegación principal">
+                <a href="./html/eventos.html"> Eventos </a>
+                <a href="./html/convenios.html"> Convenios </a>
+                <a href="./html/info.html"> Información </a>
+            </nav>
+            <div class="nav-right">
+                <input type="text" placeholder="Search">
+                <div class="user-menu-container">
+                    <div class="user-icon"> <span id="userNameDisplay"> </span> 👤 </div>
+                    <div class="user-dropdown">
+                        <a href="./html/login.html" id="loginLogoutLink">Iniciar sesión</a>
+                        <a href="./html/info.html" class="enlace-interno"> Soporte </a>
+                    </div>
                 </div>
-
-                <div class="user-dropdown">
-                    <a href="../html/login.html" id="loginLogoutLink">Iniciar sesión</a>
-                    <a href="./html/info.html" class="enlace-interno"> Soporte </a>
+            </div>
+        </header>
+            <section class="contenido">
+                <div class="tarjeta-video">
+                    <video class="video-fondo" autoplay muted loop> <source src="./img/vid/fondo-cart.mp4" type="video/mp4"> </video>
+                    <div class="oscuro"> </div>
+                    <div class="texto-tarjeta">
+                        <h1> “La energía de WAKA vibra contigo.” </h1>
+                        <p> Eventos únicos, experiencias increíbles y la mejor atmósfera. </p>
+                    </div>
                 </div>
-
+                <div class="carrusel">
+                    <div class="carrusel-inner">
+                        <img src="./img/img-index/img1.jpg" alt="img1">
+                        <img src="./img/img-index/img2.jpg" alt="img2">
+                        <img src="./img/img-index/img3.jpg" alt="img3">
+                        <img src="./img/img-index/img4.jpg" alt="img4">
+                    </div>
+                </div>
+            </section>
+            <section class="info-waka">
+                <div class="bloque-info">
+                    <h2> 🌟 Sobre Nosotros </h2>
+                    <p>
+                        En <strong> WAKA </strong> somos una plataforma especializada en la venta de <strong> eventos, conciertos, festivales y experiencias exclusivas </strong>.
+                        Nuestro propósito es conectar a las personas con los mejores momentos de su vida: música intensa, ambientes vibrantes y emociones que dejan huella.
+                    </p>
+                    <p> Estamos comprometidos con brindar seguridad, rapidez y estilo en cada compra para que tu única preocupación sea disfrutar. </p>
+                </div>
+                <div class="bloque-info">
+                    <h2> 🎵 Quiénes Somos </h2>
+                    <p>
+                        Somos un equipo apasionado por el entretenimiento y la cultura.
+                        Buscamos ofrecer una plataforma moderna, intuitiva y confiable que represente la vibra única que caracteriza a WAKA.
+                    </p>
+                    <p> Creemos en crear conexiones reales entre artistas y público, transformando cada entrada en una experiencia inolvidable. </p>
+                </div>
+            </section>
+            <section class="galeria-waka">
+                <h2> ✨ La Vibra de Nuestros Eventos ✨ </h2>
+                <div class="galeria-grid">
+                    <img src="./img/secion-img-index/sescion1.avif">
+                    <img src="./img/secion-img-index/sescion2.jpg">
+                    <img src="./img/secion-img-index/sescion3.jpg">
+                    <img src="./img/secion-img-index/sescion4.webp">
+                </div>
+            </section>
+        <footer class="footer-waka" role="contentinfo">
+            <img src="./img/logo.png" alt="Logo de WAKA" loading="lazy">
+            <p> WAKA • Música, energía y experiencias únicas </p>
+            <div class="footer-links">
+                <a href="./html/info.html#sobre-nosotros" class="enlace-interno"> Sobre Nosotros </a>
+                <a href="./html/info.html#privacidad" class="enlace-interno"> Políticas </a>
+                <a href="./html/info.html#soporte" class="enlace-interno"> Soporte </a>
             </div>
-        </div>
-    </header>
-
-    <section class="contenido">
-        <div class="tarjeta-video">
-            <video class="video-fondo" autoplay muted loop>
-                <source src="./img/vid/fondo-cart.mp4" type="video/mp4">
-            </video>
-
-            <div class="oscuro"></div>
-
-            <div class="texto-tarjeta">
-                <h1>“La energía de WAKA vibra contigo.”</h1>
-                <p>Eventos únicos, experiencias increíbles y la mejor atmósfera.</p>
-            </div>
-        </div>
-
-        <div class="carrusel">
-            <div class="carrusel-inner">
-                <img src="./img/img-index/img1.jpg" alt="img1">
-                <img src="./img/img-index/img2.jpg" alt="img2">
-                <img src="./img/img-index/img3.jpg" alt="img3">
-                <img src="./img/img-index/img4.jpg" alt="img4">
-            </div>
-        </div>
-    </section>
-
-    <section class="info-waka">
-        <div class="bloque-info">
-            <h2>🌟 Sobre Nosotros</h2>
-            <p>
-                En <strong>WAKA</strong> somos una plataforma especializada en la venta de
-                <strong>eventos, conciertos, festivales y experiencias exclusivas</strong>.
-                Nuestro propósito es conectar a las personas con los mejores momentos de su vida:
-                música intensa, ambientes vibrantes y emociones que dejan huella.
-            </p>
-            <p>
-                Estamos comprometidos con brindar seguridad, rapidez y estilo en cada compra
-                para que tu única preocupación sea disfrutar.
-            </p>
-        </div>
-
-        <div class="bloque-info">
-            <h2>🎵 Quiénes Somos</h2>
-            <p>
-                Somos un equipo apasionado por el entretenimiento y la cultura.
-                Buscamos ofrecer una plataforma moderna, intuitiva y confiable que
-                represente la vibra única que caracteriza a WAKA.
-            </p>
-            <p>
-                Creemos en crear conexiones reales entre artistas y público,
-                transformando cada entrada en una experiencia inolvidable.
-            </p>
-        </div>
-    </section>
-
-    <section class="galeria-waka">
-        <h2>✨ La Vibra de Nuestros Eventos ✨</h2>
-
-        <div class="galeria-grid">
-            <img src="./img/secion-img-index/sescion1.avif">
-            <img src="./img/secion-img-index/sescion2.jpg">
-            <img src="./img/secion-img-index/sescion3.jpg">
-            <img src="./img/secion-img-index/sescion4.webp">
-        </div>
-    </section>
-
-    <footer class="footer-waka">
-        <img src="./img/logo.png" alt="logo">
-        <p>WAKA • Música, energía y experiencias únicas</p>
-
-        <div class="footer-links">
-            <a href="./html/info.html#sobre-nosotros" class="enlace-interno"> Sobre Nosotros </a>
-            <a href="./html/info.html#privacidad" class="enlace-interno"> Politicas </a>
-            <a href="./html/info.html#soporte" class="enlace-interno"> Soporte </a>
-        </div>
-
-        <p class="copy"> © 2025 WAKA. Todos los derechos reservados. </p>
-    </footer>
-
-    <script src="./js/script.js"></script>
-
-
-</body>
-
+            <p class="copy"> © 2026 WAKA. Todos los derechos reservados. </p>
+        </footer>
+        <script src="./js/script.js" defer> </script>
+        <script src="./js/shared.js" defer> </script>
+    </body>
 </html>

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --- Lógica del Carrusel ---
+    // Lógica del Carrusel
     const track = document.querySelector(".carrusel-inner");
     const slides = track.querySelectorAll("img");
     let index = 0;
@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index >= total) index = 0;
         move();
     }
-    
+
     // Para que comience de nuevo
     setInterval(next, 2000);
     move();
 
-    // --- Lógica del Menú Desplegable y Sesión de Usuario ---
+    // Lógica del Menú Desplegable y Sesión de Usuario
     const userIcon = document.querySelector(".user-icon");
     const userDropdown = document.querySelector(".user-dropdown");
     const userNameDisplay = document.getElementById("userNameDisplay");
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function logout() {
         localStorage.removeItem("activeUser");
         // Redireccionar o actualizar la interfaz
-        window.location.href = "./index.html";
+        window.location = "../index.html";
     }
 
     // Función para actualizar la interfaz del usuario
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Listener para redirigir al login (solo para claridad, ya está en el href)
     function redirectToLogin(e) {
         if (loginLogoutLink.textContent === "Iniciar sesión") {
-             // Permitir que el 'href' normal haga la navegación
+            // Permitir que el 'href' normal haga la navegación
         }
     }
 
@@ -76,16 +76,16 @@ document.addEventListener("DOMContentLoaded", () => {
             userDropdown.style.display === "flex" ? "none" : "flex";
     });
 
-    // Cierra el menu con el click fuera
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".user-menu-container")) {
-            userDropdown.style.display = "none";
-        }
-    });
+    // // Cierra el menu con el click fuera
+    // document.addEventListener("click", (e) => {
+    //     if (!e.target.closest(".user-menu-container")) {
+    //         userDropdown.style.display = "none";
+    //     }
+    // });
 });
 
 document.querySelectorAll('.enlace-interno').forEach(enlace => {
-    enlace.addEventListener('click', function(e) {
+    enlace.addEventListener('click', function (e) {
         e.preventDefault();                    // evita comportamiento por defecto
         window.location.href = this.getAttribute('href');
     });

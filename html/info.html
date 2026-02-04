@@ -1,162 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> WAKA / Información </title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/info.css">
-    <link rel="icon" type="image/png" href="../img/logo.png">
-</head>
-
-<body>
-    <video id="bg-video" autoplay muted loop playsinline>
-        <source src="../img/vid/video-fondo.mp4" type="video/mp4">
-        Tu navegador no soporta vídeo.
-    </video>
-
-    <div class="overlay"></div>
-
-    <header class="navbar">
-        <div class="logo">
-            <a href="../index.html"><img src="../img/logo.png" alt="Logo WAKA"></a>
-        </div>
-
-        <nav>
-            <a href="../html/eventos.html">Eventos</a>
-            <a href="../html/convenios.html">Convenios</a>
-            <a href="../html/info.html">Información</a>
-        </nav>
-
-        <div class="nav-right">
-            <input type="text" placeholder="Buscar">
-
-            <div class="user-menu-container">
-                <div class="user-icon" tabindex="0">
-                    <span id="userNameDisplay"></span> 👤
-                </div>
-
-                <div class="user-dropdown">
-                    <a href="../html/login.html" id="loginLogoutLink"> Iniciar sesión </a>
-                    <a href="#soporte"> Soporte </a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> WAKA | Información </title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/info.css">
+        <link rel="icon" href="../img/logo.png" type="image/png">
+    </head>
+    <body>
+        <video id="bg-video" autoplay muted loop playsinline> <source src="../img/vid/video-fondo.mp4" type="video/mp4"> Tu navegador no soporta vídeo. </video>
+        <div class="overlay"> </div>
+        <header class="navbar">
+            <div class="logo"> <a href="../index.html"><img src="../img/logo.png" alt="Logo WAKA"> </a> </div>
+            <nav>
+                <a href="./eventos.html"> Eventos </a>
+                <a href="./convenios.html"> Convenios </a>
+                <a href="./info.html"> Información </a>
+            </nav>
+            <div class="nav-right">
+                <input type="text" placeholder="Buscar">
+                <div class="user-menu-container">
+                    <div class="user-icon" tabindex="0"> <span id="userNameDisplay"> </span> 👤 </div>
+                    <div class="user-dropdown">
+                        <a href="./html/login.html" id="loginLogoutLink"> Iniciar sesión </a>
+                        <a href="#soporte"> Soporte </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <main class="info-main">
-        <section class="container-title">
-            <h1 class="h1-title">Información WAKA</h1>
-        </section>
-
-        <section id="sobre-nosotros" class="info-section">
-            <div class="info-bloque">
-                <h2> Sobre Nosotros </h2>
-
-                <p>
-                    En <strong>WAKA</strong> somos una plataforma especializada en la venta de
-                    <strong>eventos, conciertos, festivales y experiencias exclusivas</strong>.
-                </p>
-
-                <p>
-                    Nuestro propósito es conectar a las personas con los mejores momentos de sus vidas: música intensa,
-                    ambientes vibrantes y emociones que dejan huella.
-                </p>
-
-                <p>
-                    Estamos comprometidos con ofrecer seguridad, rapidez y estilo en cada compra para que tu única
-                    preocupación sea disfrutar al máximo.
-                </p>
-
-                <p>
-                    Creemos en crear conexiones reales entre artistas y público, transformando cada entrada en una
-                    experiencia inolvidable.
-                </p>
+        </header>
+        <main class="info-main">
+            <section class="container-title"> <h1 class="h1-title"> Información WAKA </h1> </section>
+            <section id="sobre-nosotros" class="info-section">
+                <div class="info-bloque">
+                    <h2> Sobre Nosotros </h2>
+                    <p>
+                        En <strong> WAKA </strong> somos una plataforma especializada en la venta de <strong> eventos, conciertos, festivales y experiencias exclusivas </strong>. </p>
+                    <p> Nuestro propósito es conectar a las personas con los mejores momentos de sus vidas: música intensa, ambientes vibrantes y emociones que dejan huella. </p>
+                    <p> Estamos comprometidos con ofrecer seguridad, rapidez y estilo en cada compra para que tu única preocupación sea disfrutar al máximo. </p>
+                    <p> Creemos en crear conexiones reales entre artistas y público, transformando cada entrada en una experiencia inolvidable. </p>
+                </div>
+            </section>
+            <section id="privacidad" class="info-section">
+                <div class="info-bloque">
+                    <h2> Políticas de Privacidad </h2>
+                    <p class="update-date"> Última actualización: 10 de diciembre de 2025 </p>
+                    <h3> 1. Información que recopilamos </h3>
+                    <p> Recopilamos datos que tú nos proporcionas al registrarte, comprar o contactarnos: nombre, correo, teléfono, datos de pago y preferencias. </p>
+                    <h3> 2. Cómo usamos tu información </h3>
+                    <p> Para procesar tus compras, enviarte entradas y confirmaciones, mejorar el servicio y, si lo aceptas, enviarte ofertas relevantes. </p>
+                    <h3> 3. Protección de datos </h3>
+                    <p> Utilizamos cifrado SSL, cumplimos con RGPD y normativas locales. Tus datos de pago nunca se guardan en nuestros servidores. </p>
+                    <h3> 4. Compartir información </h3>
+                    <p> Solo compartimos datos con organizadores de eventos (para validar entradas), pasarelas de pago seguras y autoridades si es requerido por ley. </p>
+                    <h3> 5. Tus derechos </h3>
+                    <p> Puedes acceder, modificar o eliminar tus datos en cualquier momento. Escribe a <strong> privacidad@waka.com </strong></p>
+                    <h3> 6. Cookies </h3>
+                    <p> Usamos cookies esenciales y analíticas (con IP anonimizada). Puedes desactivarlas desde tu navegador. </p>
+                </div>
+            </section>
+            <section id="soporte" class="info-section">
+                <div class="info-bloque soporte">
+                    <h2> Centro de Soporte y Ayuda </h2>
+                    <h3> Preguntas Frecuentes </h3>
+                    <div class="faq-item">
+                        <strong> ¿Cómo compro una entrada? </strong>
+                        <p> Elige evento → selecciona zona → añade al carrito → inicia sesión → paga de forma segura. </p>
+                    </div>
+                    <div class="faq-item">
+                        <strong> ¿Recibiré las entradas por correo? </strong>
+                        <p> Sí, y también aparecerán en tu perfil en "Mis entradas". </p>
+                    </div>
+                    <div class="faq-item">
+                        <strong> ¿Puedo devolver una entrada? </strong>
+                        <p> Solo en caso de cancelación o cambio de fecha del evento. </p>
+                    </div>
+                    <div class="faq-item">
+                        <strong> ¿Qué métodos de pago aceptan? </strong>
+                        <p> Tarjetas, OXXO, SPEI, Mercado Pago, PayPal y más según tu país. </p>
+                    </div>
+                    <h3 style="margin-top: 40px;"> ¿Aún tienes dudas? Contáctanos </h3>
+                    <p>
+                        Email: <a href="mailto:soporte@waka.com"> <strong> soporte@waka.com </strong> </a> <br>
+                        WhatsApp: <strong> +52 1 55 1234 5678 </strong> <br>
+                        Horario: Lunes a Domingo de 9:00 a 22:00
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer-waka">
+            <img src="../img/logo.png" alt="Logo WAKA">
+            <p> WAKA • Música, energía y experiencias únicas </p>
+            <div class="footer-links">
+                <a href="#sobre-nosotros"> Sobre Nosotros </a>
+                <a href="#privacidad"> Políticas de Privacidad </a>
+                <a href="#soporte"> Soporte </a>
             </div>
-        </section>
-
-        <section id="privacidad" class="info-section">
-            <div class="info-bloque">
-                <h2> Políticas de Privacidad </h2>
-
-                <p class="update-date"> Última actualización: 10 de diciembre de 2025 </p>
-
-                <h3> 1. Información que recopilamos </h3>
-                <p> Recopilamos datos que tú nos proporcionas al registrarte, comprar o contactarnos: nombre, correo,
-                    teléfono, datos de pago y preferencias. </p>
-
-                <h3> 2. Cómo usamos tu información </h3>
-                <p>Para procesar tus compras, enviarte entradas y confirmaciones, mejorar el servicio y, si lo aceptas,
-                    enviarte ofertas relevantes.</p>
-
-                <h3> 3. Protección de datos </h3>
-                <p> Utilizamos cifrado SSL, cumplimos con RGPD y normativas locales. Tus datos de pago nunca se guardan
-                    en nuestros servidores. </p>
-
-                <h3> 4. Compartir información </h3>
-                <p> Solo compartimos datos con organizadores de eventos (para validar entradas), pasarelas de pago
-                    seguras y autoridades si es requerido por ley. </p>
-
-                <h3> 5. Tus derechos </h3>
-                <p> Puedes acceder, modificar o eliminar tus datos en cualquier momento. Escribe a <strong>
-                        privacidad@waka.com </strong></p>
-
-                <h3> 6. Cookies </h3>
-                <p> Usamos cookies esenciales y analíticas (con IP anonimizada). Puedes desactivarlas desde tu
-                    navegador. </p>
-            </div>
-        </section>
-
-        <section id="soporte" class="info-section">
-            <div class="info-bloque soporte">
-                <h2> Centro de Soporte y Ayuda </h2>
-
-                <h3> Preguntas Frecuentes </h3>
-                <div class="faq-item">
-                    <strong> ¿Cómo compro una entrada? </strong>
-                    <p> Elige evento → selecciona zona → añade al carrito → inicia sesión → paga de forma segura. </p>
-                </div>
-
-                <div class="faq-item">
-                    <strong> ¿Recibiré las entradas por correo? </strong>
-                    <p> Sí, y también aparecerán en tu perfil en "Mis entradas". </p>
-                </div>
-
-                <div class="faq-item">
-                    <strong> ¿Puedo devolver una entrada? </strong>
-                    <p> Solo en caso de cancelación o cambio de fecha del evento. </p>
-                </div>
-
-                <div class="faq-item">
-                    <strong> ¿Qué métodos de pago aceptan? </strong>
-                    <p> Tarjetas, OXXO, SPEI, Mercado Pago, PayPal y más según tu país. </p>
-                </div>
-
-                <h3 style="margin-top: 40px;"> ¿Aún tienes dudas? Contáctanos </h3>
-                <p>
-                    Email: <a href="mailto:soporte@waka.com"> <strong> soporte@waka.com </strong> </a> <br>
-                    WhatsApp: <strong> +52 1 55 1234 5678 </strong> <br>
-                    Horario: Lunes a Domingo de 9:00 a 22:00
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer-waka">
-        <img src="../img/logo.png" alt="Logo WAKA">
-        <p> WAKA • Música, energía y experiencias únicas </p>
-
-        <div class="footer-links">
-            <a href="#sobre-nosotros"> Sobre Nosotros </a>
-            <a href="#privacidad"> Políticas de Privacidad </a>
-            <a href="#soporte"> Soporte </a>
-        </div>
-
-        <p class="copy"> © 2025 WAKA. Todos los derechos reservados. </p>
-    </footer>
-
-    <script src="../js/info.js"></script>
-</body>
-
+            <p class="copy"> © 2025 WAKA. Todos los derechos reservados. </p>
+        </footer>
+        <script src="../js/info.js"> </script>
+    </body>
 </html>

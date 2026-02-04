@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function logout() {
         localStorage.removeItem("activeUser");
         // Redireccionar o actualizar la interfaz
-        window.location.href = "../index.html";
+        window.location = "../index.html";
     }
 
     // Función para actualizar la interfaz del usuario
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Usuario no logueado
             userNameDisplay.textContent = ""; // Borra el nombre
             loginLogoutLink.textContent = "Iniciar sesión";
-            loginLogoutLink.href = "./login.html"; // Vuelve al enlace de login
+            loginLogoutLink.href = "./html/login.html"; // Vuelve al enlace de login
             loginLogoutLink.removeEventListener("click", logout); // Quita el listener de Cerrar Sesión
             loginLogoutLink.addEventListener("click", redirectToLogin); // Agrega el listener de Iniciar Sesión (opcional, ya está el href)
         }
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Listener para redirigir al login (solo para claridad, ya está en el href)
     function redirectToLogin(e) {
         if (loginLogoutLink.textContent === "Iniciar sesión") {
-             // Permitir que el 'href' normal haga la navegación
+            // Permitir que el 'href' normal haga la navegación
         }
     }
 
@@ -55,17 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
         userDropdown.style.display =
             userDropdown.style.display === "flex" ? "none" : "flex";
     });
-
-    // Cierra el menu con el click fuera
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".user-menu-container")) {
-            userDropdown.style.display = "none";
-        }
-    });
 });
 
 document.querySelectorAll('.enlace-interno').forEach(enlace => {
-    enlace.addEventListener('click', function(e) {
+    enlace.addEventListener('click', function (e) {
         e.preventDefault();                    // evita comportamiento por defecto
         window.location.href = this.getAttribute('href');
     });

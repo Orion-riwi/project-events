@@ -78,7 +78,7 @@ loginForm.addEventListener("submit", (e) => {
             showMessage(loginMessage, " Bienvenido Administrador", "success");
 
             setTimeout(() => {
-                window.location.href = "./dashboard.html";
+                window.location = "./dashboard.html";
             }, 1500);
 
             return; // Para poder para o detener
@@ -99,9 +99,7 @@ loginForm.addEventListener("submit", (e) => {
         showMessage(loginMessage, " Bienvenido " + userFound.name, "success");
 
         setTimeout(() => {
-            window.location.href = "../index.html";
+            window.location = "../index.html";
         }, 1500);
     });
-
 });
-

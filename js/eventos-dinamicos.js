@@ -64,10 +64,10 @@ Object.keys(eventosFinal).forEach(id => {
 
     contenedor.innerHTML += `
         <div class="card">
-            <img src="${e.imagen}">
-            <h3>${e.titulo}</h3>
-            <p>${e.descripcion}</p>
-            <button onclick="verEvento('${id}')">Ver más</button>
+            <img src=" ${e.imagen} ">
+            <h3> ${e.titulo} </h3>
+            <p> ${e.descripcion} </p>
+            <button onclick="verEvento('${id}')"> Ver más </button>
         </div>
     `;
 });

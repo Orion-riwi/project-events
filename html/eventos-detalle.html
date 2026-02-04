@@ -1,78 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WAKA / Eventos-Detallados</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/eventos.css">
-    <link rel="icon" type="image/png" href="../img/logo.png">
-</head>
-
-<body>
-<!--cabeza de la pagina-->
-    <video id="bg-video" autoplay muted loop>
-        <source src="../img/vid/video-fondo.mp4" type="video/mp4">
-    </video>
-
-    <div class="overlay"></div>
-
-    <header class="navbar">
-        <div class="logo">
-            <a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
-        </div>
-
-        <nav>
-            <a href="../html/eventos.html">Eventos</a>
-            <a href="../html/convenios.html">Convenios</a>
-            <a href="../html/info.html">Información </a>
-        </nav>
-
-        <div class="nav-right">
-            <input type="text" placeholder="Search">
-            <div class="user-menu-container">
-
-                <div class="user-icon">
-                    <span id="userNameDisplay"></span> 👤
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> WAKA | Eventos Detallados </title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/eventos.css">
+        <link rel="icon" href="../img/logo.png" type="image/png">
+    </head>
+    <body>
+        <!--cabeza de la pagina-->
+        <video id="bg-video" autoplay muted loop> <source src="../img/vid/video-fondo.mp4" type="video/mp4"> </video>
+        <div class="overlay"> </div>
+        <header class="navbar">
+            <div class="logo"> <a href="../index.html"><img src="../img/logo.png" alt="logo"> </a> </div>
+            <nav>
+                <a href="./eventos.html"> Eventos </a>
+                <a href="./convenios.html"> Convenios </a>
+                <a href="./info.html"> Información </a>
+            </nav>
+            <div class="nav-right">
+                <input type="text" placeholder="Search">
+                <div class="user-menu-container">
+                    <div class="user-icon"> <span id="userNameDisplay"> </span> 👤 </div>
+                    <div class="user-dropdown">
+                        <a href="./html/login.html" id="loginLogoutLink"> Iniciar sesión </a>
+                        <a href="./html/info.html#soporte" class="enlace-interno"> Soporte </a>
+                    </div>
                 </div>
-
-                <div class="user-dropdown">
-                    <a href="../html/login.html" id="loginLogoutLink">Iniciar sesión</a>
-                    <a href="info.html#soporte" class="enlace-interno"> Soporte </a>
-                </div>
-                
             </div>
-        </div>
-    </header>
-<!--cabeza de la pagina-->
-
-<!--contenido-->
-<section class="detalle-evento">
-    <h1 id="titulo"></h1>
-    <img id="imagen" src="" alt="">
-    <p id="descripcion"></p>
-    <button id="comprar">Comprar</button>
-    <div id="mensaje-compra" class="mensaje-compra"></div>
-</section>
-
-
-    <!-- FOOTER -->
-    <footer class="footer-waka">
-        <img src="../img/logo.png" alt="logo">
-        <p>WAKA • Música, energía y experiencias únicas</p>
-
-        <div class="footer-links">
-            <a href="info.html#sobre-nosotros" class="enlace-interno"> Sobre Nosotros </a>
-            <a href="info.html#privacidad" class="enlace-interno"> Politicas </a>
-            <a href="info.html#soporte" class="enlace-interno"> Soporte </a>
-        </div>
-
-        <p class="copy">© 2025 WAKA. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="../js/eventos.js"></script>
-    <script src="../js/evento-detalle.js"></script>
-
-</body>
+        </header>
+        <!--contenido-->
+        <section class="detalle-evento">
+            <h1 id="titulo"> </h1>
+            <img id="imagen" src="" alt="">
+            <p id="descripcion"> </p>
+            <button id="comprar"> Comprar </button>
+            <div id="mensaje-compra" class="mensaje-compra"> </div>
+        </section>
+        <!-- FOOTER -->
+        <footer class="footer-waka">
+            <img src="../img/logo.png" alt="logo">
+            <p> WAKA • Música, energía y experiencias únicas </p>
+            <div class="footer-links">
+                <a href="./html/info.html#sobre-nosotros" class="enlace-interno"> Sobre Nosotros </a>
+                <a href="./html/info.html#privacidad" class="enlace-interno"> Politicas </a>
+                <a href="./html/info.html#soporte" class="enlace-interno"> Soporte </a>
+            </div>
+            <p class="copy"> © 2025 WAKA. Todos los derechos reservados. </p>
+        </footer>
+        <script src="../js/eventos.js"> </script>
+        <script src="../js/evento-detalle.js"> </script>
+    </body>
 </html>

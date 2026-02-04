@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("activeUser");
         updateNavbar();
         // Redirigir al inicio
-        window.location.href = "../index.html";
+        window.location = "../index.html";
     };
 
     const updateNavbar = () => {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             userNameDisplay.textContent = "";
             loginLogoutLink.textContent = "Iniciar sesión";
-            loginLogoutLink.href = "./login.html";
+            loginLogoutLink.href = "./html/login.html";
             loginLogoutLink.removeEventListener("click", logout);
         }
     };
@@ -46,21 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
         userDropdown.style.display = userDropdown.style.display === "flex" ? "none" : "flex";
     });
 
-    // Cerrar menú al hacer clic fuera
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".user-menu-container")) {
-            userDropdown.style.display = "none";
-        }
-    });
-
-    // === Efecto sticky + cambio de tamaño del título ===
+    // Efecto sticky + cambio de tamaño del título 
     window.addEventListener("scroll", () => {
         titulo.classList.toggle("is-stuck", window.scrollY > 100);
     });
 });
 
 document.querySelectorAll('.enlace-interno').forEach(enlace => {
-    enlace.addEventListener('click', function(e) {
+    enlace.addEventListener('click', function (e) {
         e.preventDefault();                    // evita comportamiento por defecto
         window.location.href = this.getAttribute('href');
     });
