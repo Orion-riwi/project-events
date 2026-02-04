@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Usuario no logueado
             userNameDisplay.textContent = ""; // Borra el nombre
             loginLogoutLink.textContent = "Iniciar sesión";
-            loginLogoutLink = "../html/login.html"; // Vuelve al enlace de login
+            loginLogoutLink.href = "./html/login.html"; // Vuelve al enlace de login
             loginLogoutLink.removeEventListener("click", logout); // Quita el listener de Cerrar Sesión
             loginLogoutLink.addEventListener("click", redirectToLogin); // Agrega el listener de Iniciar Sesión (opcional, ya está el href)
         }
@@ -54,13 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Muestra el menu con el click
         userDropdown.style.display =
             userDropdown.style.display === "flex" ? "none" : "flex";
-    });
-
-    // Cierra el menu con el click fuera
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".user-menu-container")) {
-            userDropdown.style.display = "none";
-        }
     });
 });
 

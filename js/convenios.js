@@ -75,13 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
         userDropdown.style.display =
             userDropdown.style.display === "flex" ? "none" : "flex";
     });
-
-    // Cierra el menu con el click fuera
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".user-menu-container")) {
-            userDropdown.style.display = "none";
-        }
-    });
 });
 
 

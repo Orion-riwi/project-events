@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             userNameDisplay.textContent = "";
             loginLogoutLink.textContent = "Iniciar sesión";
-            loginLogoutLink = "../html/login.html";
+            loginLogoutLink.href = "./html/login.html";
             loginLogoutLink.removeEventListener("click", logout);
         }
     };
@@ -46,14 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         userDropdown.style.display = userDropdown.style.display === "flex" ? "none" : "flex";
     });
 
-    // Cerrar menú al hacer clic fuera
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".user-menu-container")) {
-            userDropdown.style.display = "none";
-        }
-    });
-
-    // === Efecto sticky + cambio de tamaño del título ===
+    // Efecto sticky + cambio de tamaño del título 
     window.addEventListener("scroll", () => {
         titulo.classList.toggle("is-stuck", window.scrollY > 100);
     });

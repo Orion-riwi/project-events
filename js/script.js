@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --- Lógica del Carrusel ---
+    // Lógica del Carrusel
     const track = document.querySelector(".carrusel-inner");
     const slides = track.querySelectorAll("img");
     let index = 0;
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(next, 2000);
     move();
 
-    // --- Lógica del Menú Desplegable y Sesión de Usuario ---
+    // Lógica del Menú Desplegable y Sesión de Usuario
     const userIcon = document.querySelector(".user-icon");
     const userDropdown = document.querySelector(".user-dropdown");
     const userNameDisplay = document.getElementById("userNameDisplay");
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Usuario no logueado
             userNameDisplay.textContent = ""; // Borra el nombre
             loginLogoutLink.textContent = "Iniciar sesión";
-            loginLogoutLink.href = "../html/login.html"; // Vuelve al enlace de login
+            loginLogoutLink.href = "./html/login.html"; // Vuelve al enlace de login
             loginLogoutLink.removeEventListener("click", logout); // Quita el listener de Cerrar Sesión
             loginLogoutLink.addEventListener("click", redirectToLogin); // Agrega el listener de Iniciar Sesión (opcional, ya está el href)
         }
@@ -76,12 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
             userDropdown.style.display === "flex" ? "none" : "flex";
     });
 
-    // Cierra el menu con el click fuera
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".user-menu-container")) {
-            userDropdown.style.display = "none";
-        }
-    });
+    // // Cierra el menu con el click fuera
+    // document.addEventListener("click", (e) => {
+    //     if (!e.target.closest(".user-menu-container")) {
+    //         userDropdown.style.display = "none";
+    //     }
+    // });
 });
 
 document.querySelectorAll('.enlace-interno').forEach(enlace => {

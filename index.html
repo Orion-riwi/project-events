@@ -21,17 +21,16 @@
                 <a href="./html/info.html"> Información </a>
             </nav>
             <div class="nav-right">
-                <input type="search" placeholder="Buscar" aria-label="Buscar en el sitio">
+                <input type="text" placeholder="Search">
                 <div class="user-menu-container">
-                    <button class="user-icon" aria-label="Menú de usuario" aria-expanded="false"> <span id="userNameDisplay"> 👤 </span> </button>
-                    <div class="user-dropdown" role="menu" hidden>
-                        <a href="./html/login.html" id="loginLogoutLink"> Iniciar sesión </a>
-                        <a href="./html/info.html#soporte" class="enlace-interno"> Soporte </a>
+                    <div class="user-icon"> <span id="userNameDisplay"> </span> 👤 </div>
+                    <div class="user-dropdown">
+                        <a href="./html/login.html" id="loginLogoutLink">Iniciar sesión</a>
+                        <a href="./html/info.html" class="enlace-interno"> Soporte </a>
                     </div>
                 </div>
             </div>
         </header>
-        <main class="contenido">
             <section class="contenido">
                 <div class="tarjeta-video">
                     <video class="video-fondo" autoplay muted loop> <source src="./img/vid/fondo-cart.mp4" type="video/mp4"> </video>
@@ -77,7 +76,6 @@
                     <img src="./img/secion-img-index/sescion4.webp">
                 </div>
             </section>
-        </main>
         <footer class="footer-waka" role="contentinfo">
             <img src="./img/logo.png" alt="Logo de WAKA" loading="lazy">
             <p> WAKA • Música, energía y experiencias únicas </p>
@@ -88,7 +86,7 @@
             </div>
             <p class="copy"> © 2026 WAKA. Todos los derechos reservados. </p>
         </footer>
-        <script src="./js/shared.js" defer> </script>
         <script src="./js/script.js" defer> </script>
+        <script src="./js/shared.js" defer> </script>
     </body>
 </html>

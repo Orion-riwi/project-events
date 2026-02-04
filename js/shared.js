@@ -29,23 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             userNameDisplay.textContent = '';
             loginLogoutLink.textContent = 'Iniciar sesión';
-            loginLogoutLink.href = '../html/login.html';
+            loginLogoutLink.href = './html/login.html';
             loginLogoutLink.removeEventListener('click', logout);
         }
     };
 
     updateNavbar();
-
-    userIcon.addEventListener('click', (e) => {
-        e.stopPropagation();
-        userDropdown.style.display = userDropdown.style.display === 'flex' ? 'none' : 'flex';
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.user-menu-container')) {
-            userDropdown.style.display = 'none';
-        }
-    });
 
     // Enlaces internos suaves
     document.querySelectorAll('.enlace-interno').forEach(enlace => {
