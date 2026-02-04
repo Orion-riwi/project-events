@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("activeUser");
         updateNavbar();
         // Redirigir al inicio
-        window.location.href = "../index.html";
+        window.location = "../index.html";
     };
 
     const updateNavbar = () => {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             userNameDisplay.textContent = "";
             loginLogoutLink.textContent = "Iniciar sesión";
-            loginLogoutLink.href = "./login.html";
+            loginLogoutLink = "../html/login.html";
             loginLogoutLink.removeEventListener("click", logout);
         }
     };
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.querySelectorAll('.enlace-interno').forEach(enlace => {
-    enlace.addEventListener('click', function(e) {
+    enlace.addEventListener('click', function (e) {
         e.preventDefault();                    // evita comportamiento por defecto
         window.location.href = this.getAttribute('href');
     });

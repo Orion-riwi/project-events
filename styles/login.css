@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -16,7 +16,7 @@ body{
     background-color: #F0F4F3;
 }
 
-.contenedor{
+.contenedor {
     border: 2px solid black;
     width: 800px;
     height: 500px;
@@ -25,35 +25,35 @@ body{
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgb(0, 0,0,0.3);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
 }
 
-.contenedor-form{
+.contenedor-form {
     width: 100%;
     overflow: hidden;
 }
 
-.contenedor-form form{
+.contenedor-form form {
     height: 100%;
-    display:  flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease-in;
 }
 
-.contenedor-form h2{
+.contenedor-form h2 {
     font-size: 30px;
     margin-bottom: 20px;
 }
 
-.social-networks{
+.social-networks {
     display: flex;
     gap: 12px;
     margin-bottom: 25px;
 }
 
-.social-networks ion-icon{
+.social-networks ion-icon {
     border: 1px solid #C9CCCB;
     font-size: 18px;
     border-radius: 6px;
@@ -61,12 +61,12 @@ body{
     cursor: pointer;
 }
 
-.contenedor-form span{
+.contenedor-form span {
     font-size: 12px;
     margin: 15px;
 }
 
-.contenedor-input{
+.contenedor-input {
     width: 300px;
     height: 40px;
     margin-bottom: 10px;
@@ -78,7 +78,7 @@ body{
     background-color: #EEEEEE;
 }
 
-.contenedor-input input{
+.contenedor-input input {
     border: none;
     outline: none;
     height: 100%;
@@ -86,14 +86,14 @@ body{
     background-color: inherit;
 }
 
-.contenedor-form a{
+.contenedor-form a {
     color: black;
     font-size: 14px;
     margin-bottom: 20px;
     margin-top: 5px;
 }
 
-.button{
+.button {
     width: 170px;
     height: 45px;
     font-size: 15px;
@@ -105,21 +105,21 @@ body{
     color: white;
 }
 
-/*animision form*/
-.sing-up{
+/* animision form */
+.sing-up {
     transform: translateX(-100%);
 }
 
-.contenedor .toggle .sing-in{
+.contenedor .toggle .sing-in {
     transform: translateX(100%);
 }
 
-.contenedor .toggle .sing-up{
+.contenedor .toggle .sing-up {
     transform: translateX(0);
 }
 
-/*welcome*/
-.contenedor-welcome{
+/* welcome */
+.contenedor-welcome {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -132,14 +132,14 @@ body{
     border-radius: 50% 0 0 50%;
 }
 
-.contenedor.toggle .contenedor-welcome{
+.contenedor.toggle .contenedor-welcome {
     transform: translateX(0);
     border-radius: 0 50% 50% 0;
     background-color: #000000;
 
 }
 
-.contenedor-welcome .welcome{
+.contenedor-welcome .welcome {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -147,63 +147,63 @@ body{
     gap: 20px;
     padding: 0 50px;
     color: white;
-    transition:  transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
-.welcome-sing-in{
-    transform:  translateX(100%);
+.welcome-sing-in {
+    transform: translateX(100%);
 }
 
-.contenedor-welcome h3{
+.contenedor-welcome h3 {
     font-size: 40px;
 }
 
-.contenedor-welcome p{
+.contenedor-welcome p {
     font-size: 14px;
     text-align: center;
 }
 
-.contenedor-welcome .button{
+.contenedor-welcome .button {
     border: 2px solid white;
     background-color: transparent;
 }
 
-.contenedor.toggle .welcome-sing-in{
+.contenedor.toggle .welcome-sing-in {
     transform: translateX(0);
 }
 
-.contenedor.toggle .welcome-sing-up{
+.contenedor.toggle .welcome-sing-up {
     transform: translateX(-100%);
 }
 
-div .contenedor div .contenedor-form form button .button a{
+div .contenedor div .contenedor-form form button .button a {
     margin: 30px;
     width: 200px;
     height: 40px;
 }
 
-.container-section1{
+.container-section1 {
     background-color: #3AA8AD;
     width: 450px;
     height: 100vh;
 }
 
-.container-section1-div1{
+.container-section1-div1 {
     display: flex;
     justify-content: end;
     margin-right: 30px;
 }
 
-.container-section1-div1 h1{
+.container-section1-div1 h1 {
     margin-top: 120px;
 }
 
-.container-section1-div1 h1 img .logo-img{
+.container-section1-div1 h1 img .logo-img {
     display: flex;
     justify-content: center;
 }
 
-.button a{
+.button a {
     color: white;
 }
 
@@ -216,7 +216,7 @@ div .contenedor div .contenedor-form form button .button a{
     text-align: center;
     font-size: 14px;
     font-weight: 600;
-    display: none; 
+    display: none;
 }
 
 .message.error {
@@ -231,7 +231,7 @@ div .contenedor div .contenedor-form form button .button a{
     color: #0a7300;
 }
 
-/* --- Estilos para el botón de regreso (Volver al Inicio) --- */
+/* Estilos para el botón de regreso (Volver al Inicio) */
 .back-link {
     position: absolute;
     top: 30px;

@@ -1,121 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard / Admin</title>
-    <link rel="stylesheet" href="../styles/dashboard.css">
-    <link rel="icon" type="image/png" href="../img/logo.png">
-</head>
-
-<body>
-
-    <div class="sidebar">
-
-        <div class="profile">
-            <div class="pfp">👤</div>
-            <h2>Análisis</h2>
-        </div>
-
-        <div class="section">
-            <h3>Registros</h3>
-            <button class="btn-side" id="verTodosUsuarios">Ver todos los registros</button>
-        </div>
-
-        <div class="section">
-            <h3>Actualizar eventos</h3>
-            <button class="btn-side" id="btnActualizarEventos">Crear evento</button>
-        </div>
-
-        <div class="section">
-            <h3>Actualizar y eliminar eventos</h3>
-            <button class="btn-side" id="btnEliminarEventos">Editar y eliminar eventos</button>
-        </div>
-
-    </div>
-
-    <div class="main">
-
-        <header class="top">
-            <h1>Cantidad de usuarios</h1>
-
-            <div class="top-right">
-                <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Dashboard | Admin </title>
+        <link rel="stylesheet" href="../styles/dashboard.css">
+        <link rel="icon"  href="../img/logo.png" type="image/png">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="profile">
+                <div class="pfp"> 👤 </div>
+                <h2> Análisis </h2>
             </div>
-        </header>
-
-        <div class="search-box">
-            <input type="text" id="busqueda" placeholder="Buscando">
-            <button id="btnBuscar" class="search-btn">🔍</button>
-            <button id="btnLimpiar" class="delete-btn">🗑</button>
-            <label><input type="checkbox" id="checkTodos"> Mostrar todos</label>
+            <div class="section">
+                <h3> Registros </h3>
+                <button class="btn-side" id="verTodosUsuarios"> Ver todos los registros </button>
+            </div>
+            <div class="section">
+                <h3> Actualizar eventos </h3>
+                <button class="btn-side" id="btnActualizarEventos"> Crear evento </button>
+            </div>
+            <div class="section">
+                <h3> Actualizar y eliminar eventos </h3>
+                <button class="btn-side" id="btnEliminarEventos"> Editar y eliminar eventos </button>
+            </div>
         </div>
-
-        <table class="tabla">
-            <thead>
-                <tr>
-                    <td class="col-id">Id</td>
-                    <td class="col-usuario">Usuario</td>
-                    <td class="col-correo">Correo</td>
-                    <td class="col-tipo">Tipo de Usuario</td>
-                    <td class="col-accion">Opción de eliminar</td>
-                </tr>
-            </thead>
-            <tbody id="tbody"></tbody>
-        </table>
-
-        <!-- SECCIÓN NUEVA: CRUD DE EVENTOS -->
-        <section id="crudEventos" style="margin-top:40px; display:none;">
-            <h2>Gestión de Eventos</h2>
-
-            <form id="formEvento" style="margin-bottom:20px;">
-                <input type="hidden" id="editId">
-
-                <input type="text" id="tituloEvento" placeholder="Título" required>
-                <input type="text" id="descripcionEvento" placeholder="Descripción" required>
-                <input type="text" id="imagenEvento" placeholder="Ruta de la imagen (../img/...)" required>
-                <input type="number" id="precioEvento" placeholder="Precio" required>
-
-                <button type="submit" class="search-btn">Guardar</button>
-            </form>
-
-            <table class="tabla">
-                <thead>
-                    <tr>
-                        <td>Título</td>
-                        <td>Precio</td>
-                        <td>Acciones</td>
-                    </tr>
-                </thead>
-                <tbody id="tbodyEventos"></tbody>
-            </table>
-        </section>
-
-        <!-- SECCIÓN COMPRAS -->
-        <section style="margin-top: 40px;">
-            <h2>Registros de compras</h2>
-            <div style="margin-bottom:10px;">
-                <button id="btnLimpiarCompras" class="delete-btn">Limpiar historial de compras</button>
+        <div class="main">
+            <header class="top">
+                <h1> Cantidad de usuarios </h1>
+                <div class="top-right"> <button id="logoutBtn" class="logout-btn"> Cerrar sesión </button> </div>
+            </header>
+            <div class="search-box">
+                <input type="text" id="busqueda" placeholder="Buscando">
+                <button id="btnBuscar" class="search-btn"> 🔍 </button>
+                <button id="btnLimpiar" class="delete-btn"> 🗑 </button>
+                <label> <input type="checkbox" id="checkTodos"> Mostrar todos </label>
             </div>
             <table class="tabla">
                 <thead>
                     <tr>
-                        <td>Usuario</td>
-                        <td>Correo</td>
-                        <td>Evento</td>
-                        <td>Precio</td>
-                        <td>Fecha</td>
+                        <td class="col-id"> Id </td>
+                        <td class="col-usuario"> Usuario </td>
+                        <td class="col-correo"> Correo </td>
+                        <td class="col-tipo"> Tipo de Usuario </td>
+                        <td class="col-accion"> Opción de eliminar </td>
                     </tr>
                 </thead>
-                <tbody id="tbodyCompras"></tbody>
+                <tbody id="tbody">
+                </tbody>
             </table>
-        </section>
-
-    </div>
-
-    <script src="../js/dashboard.js"></script>
-    <script src="../js/ayuda.js"></script>
-</body>
-
+            <!-- SECCIÓN NUEVA: CRUD DE EVENTOS -->
+            <section id="crudEventos" style="margin-top:40px; display:none;">
+                <h2> Gestión de Eventos </h2>
+                <form id="formEvento" style="margin-bottom:20px;">
+                    <input type="hidden" id="editId">
+                    <input type="text" id="tituloEvento" placeholder="Título" required>
+                    <input type="text" id="descripcionEvento" placeholder="Descripción" required>
+                    <input type="text" id="imagenEvento" placeholder="Ruta de la imagen (../img/...)" required>
+                    <input type="number" id="precioEvento" placeholder="Precio" required>
+                    <button type="submit" class="search-btn"> Guardar </button>
+                </form>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <td> Título </td>
+                            <td> Precio </td>
+                            <td> Acciones </td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyEventos">
+                    </tbody>
+                </table>
+            </section>
+            <!-- SECCIÓN COMPRAS -->
+            <section style="margin-top: 40px;">
+                <h2> Registros de compras </h2>
+                <div style="margin-bottom:10px;"> <button id="btnLimpiarCompras" class="delete-btn"> Limpiar historial de compras </button> </div>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <td> Usuario </td>
+                            <td> Correo </td>
+                            <td> Evento </td>
+                            <td> Precio </td>
+                            <td> Fecha </td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyCompras">
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <script src="../js/dashboard.js"> </script>
+        <script src="../js/ayuda.js"> </script>
+    </body>
 </html>

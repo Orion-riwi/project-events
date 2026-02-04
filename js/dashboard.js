@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Protección admin
     if (!active || active.email !== adminEmail || active.pass !== adminPass) {
         alert("Acceso denegado");
-        window.location.href = "./html/login.html";
+        window.location = "../html/login.html";
         return;
     }
 
@@ -23,14 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td>${index + 1}</td>
-                <td>${u.name}</td>
-                <td>${u.email}</td>
-                <td>${u.tipo || "Usuario"}</td>
+                <td> ${index + 1} </td>
+                <td> ${u.name} </td>
+                <td> ${u.email} </td>
+                <td> ${u.tipo || "Usuario"} </td>
                 <td>
-                    <button class="deleteRow" data-index="${index}">
-                        Eliminar
-                    </button>
+                    <button class="deleteRow" data-index="${index}"> Eliminar </button>
                 </td>
             `;
 
@@ -57,16 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mostrar todos 
     document.getElementById("verTodosUsuarios").onclick = () => {
-    crudEventos.style.display = "none"; // Oculta eventos
-    render(users);                      // Muestra registros de usuarios
-    window.scrollTo(0, 0);  
-};
+        crudEventos.style.display = "none"; // Oculta eventos
+        render(users);                      // Muestra registros de usuarios
+        window.scrollTo(0, 0);
+    };
 
 
     // Logout
     document.getElementById("logoutBtn").onclick = () => {
         localStorage.removeItem("activeUser");
-        window.location.href = "../index.html";
+        window.location = "../index.html";
     };
 
     // muestra en la compra de los usuarios
@@ -79,11 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
         compras.forEach(c => {
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td>${c.usuario}</td>
-                <td>${c.email}</td>
-                <td>${c.evento}</td>
-                <td>$${Number(c.precio).toLocaleString()}</td>
-                <td>${c.fecha}</td>
+                <td> ${c.usuario} </td>
+                <td> ${c.email} </td>
+                <td> ${c.evento} </td>
+                <td>$ ${Number(c.precio).toLocaleString()} </td>
+                <td> ${c.fecha} </td>
             `;
             tbodyCompras.appendChild(row);
         });
@@ -124,11 +122,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td>${ev.titulo}</td>
-                <td>$${ev.precio.toLocaleString()}</td>
+                <td> ${ev.titulo} </td>
+                <td>$ ${ev.precio.toLocaleString()} </td>
                 <td>
-                    <button class="btn-edit" onclick="editarEvento('${id}')">Editar</button>
-                    <button class="btn-delete" onclick="eliminarEvento('${id}')">Eliminar</button>
+                    <button class="btn-edit" onclick="editarEvento('${id}')"> Editar </button>
+                    <button class="btn-delete" onclick="eliminarEvento('${id}')"> Eliminar </button>
                 </td>
             `;
 
@@ -161,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Editar
-    window.editarEvento = function(id) {
+    window.editarEvento = function (id) {
         const ev = eventosLS[id];
 
         editId.value = id;
@@ -172,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Eliminar
-    window.eliminarEvento = function(id) {
+    window.eliminarEvento = function (id) {
         if (!confirm("¿Eliminar este evento?")) return;
 
         delete eventosLS[id];
@@ -191,5 +189,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnActualizarEventos) btnActualizarEventos.onclick = mostrarCRUD;
     if (btnEliminarEventos) btnEliminarEventos.onclick = mostrarCRUD;
     if (btnCrearEventos) btnCrearEventos.onclick = mostrarCRUD;
-
 });
